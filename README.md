@@ -24,6 +24,34 @@ Being an AI enthusiast, I am starting to see all the amazing things it can bring
 
 ---
 
+## Featured Projects
+
+### [RADMC-3D Iterative Wrapper](https://github.com/Thiebauts/radmc3d-iterative-wrapper)
+
+A Python framework developed during my postdoc at the Department of Space, Earth and Environment at Chalmers, for modelling the dust emission around evolved stars known as *water fountains* — old stars with bipolar jets traced by water maser emission. The code wraps two astrophysics tools: [RADMC-3D](https://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/) for Monte Carlo radiative transfer, and [Optool](https://github.com/cdominik/optool) for computing dust opacities from laboratory measurements of silicates by [Demyk et al. (2022)](https://doi.org/10.1051/0004-6361/202243815). The key challenge is that dust opacity depends on temperature, but temperature itself depends on opacity. The wrapper solves this by iterating: it classifies grid cells into temperature zones, assigns the corresponding opacity to each zone, reruns the simulation, and repeats until both the temperature field and the zone assignments converge. It also includes a parameter grid explorer for systematic exploration of the physical parameter space.
+
+`Python` · `NumPy` · `Matplotlib` · `RADMC-3D` · `Optool`
+
+---
+
+### [Mean Blood Pressure](https://github.com/Thiebauts/MeanBloodPressure) & [BP OCR Bench](https://github.com/Thiebauts/bp-ocr-bench)
+
+Built for someone who needed to read handwritten blood pressure logs several times a day, compute daily averages, and track trends over time. The app lets you photograph a handwritten log, sends the image to a vision LLM via [OpenRouter](https://openrouter.ai/), and returns structured readings that can be reviewed, edited, and exported as a PDF report.
+
+To choose the right model, I built a separate benchmarking tool — [BP OCR Bench](https://github.com/Thiebauts/bp-ocr-bench). With a friend, I created a dataset of handwritten notes at varying difficulty levels, then evaluated 18 vision models (from Google, OpenAI, Anthropic, Mistral, and others) on extraction accuracy, cost per request, and response time. The result: Gemini Flash 3.0 and Gemini 3.1 Flash Lite sit on the Pareto frontier, achieving 95–98% accuracy at ~$0.001/request — two orders of magnitude cheaper than frontier models for comparable precision.
+
+`TypeScript` · `Next.js` · `React` · `OpenRouter API` · `Vite` · `IndexedDB`
+
+---
+
+### [Triathlon Väst Dashboard](https://github.com/Thiebauts/triathlon-vast-dashboard)
+
+I'm a member of [Triathlon Väst](https://www.triathlonvast.se/) in Gothenburg, a club that organises competitions in running, swimming, cycling, triathlon, duathlon, and swimrun throughout the year. That generates a lot of results data, so I built a dashboard where members can browse competition results, view athlete profiles, track accumulated points, and explore club rankings across seasons (2021–2025). The data comes from CSV exports of the competition management system, parsed and bundled at build time. The app is bilingual (Swedish/English) and open to contributions — members can request features or submit pull requests directly.
+
+`TypeScript` · `Next.js` · `React` · `Recharts` · `Tailwind CSS` · `Vercel`
+
+---
+
 ## Let's talk
 
 🌐 [thiebautschirmer.com](https://www.thiebautschirmer.com) &nbsp;|&nbsp; 💼 [linkedin.com/in/thiebaut-schirmer](https://www.linkedin.com/in/thiebaut-schirmer/) &nbsp;|&nbsp; 📍 Gothenburg, Sweden
