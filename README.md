@@ -16,9 +16,29 @@ Being an AI enthusiast, I am starting to see all the amazing things it can bring
 
 ## What I work with
 
-**Languages and tools:** Python (NumPy, SciPy, Pandas, Matplotlib, Dash/Plotly, Scikit-learn, TensorFlow, Optuna, MLflow), SQL, Fortran, LaTeX, GitHub, Railway
+**Languages and tools:**
 
-**Currently learning:** Azure Data Scientist certification (DP-100), React Native, Next.js
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
+![Plotly](https://img.shields.io/badge/Dash%2FPlotly-3F4F75?logo=plotly&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
+![Optuna](https://img.shields.io/badge/Optuna-2980B9)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?logo=mysql&logoColor=white)
+![Fortran](https://img.shields.io/badge/Fortran-734F96?logo=fortran&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white)
+
+**Currently learning:**
+
+![Azure DP-100](https://img.shields.io/badge/Azure%20DP--100-0078D4?logo=microsoftazure&logoColor=white)
+![React Native](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=20232a)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
 
 **Strengths:** team collaboration, student supervision, conference organisation, creative problem-solving, curiosity-driven, helpful mentorship
 
@@ -30,7 +50,11 @@ Being an AI enthusiast, I am starting to see all the amazing things it can bring
 
 A Python framework developed during my postdoc at the Department of Space, Earth and Environment at Chalmers, for modelling the dust emission around evolved stars known as *water fountains* -- old stars with bipolar jets traced by water maser emission. The code wraps two astrophysics tools: [RADMC-3D](https://www.ita.uni-heidelberg.de/~dullemond/software/radmc-3d/) for Monte Carlo radiative transfer, and [Optool](https://github.com/cdominik/optool) for computing dust opacities from laboratory measurements of silicates by [Demyk et al. (2022)](https://doi.org/10.1051/0004-6361/202243815). The key challenge is that dust opacity depends on temperature, but temperature itself depends on opacity. The wrapper solves this by iterating: it classifies grid cells into temperature zones, assigns the corresponding opacity to each zone, reruns the simulation, and repeats until both the temperature field and the zone assignments converge. It also includes a parameter grid explorer for systematic exploration of the physical parameter space.
 
-`Python` · `NumPy` · `Matplotlib` · `RADMC-3D` · `Optool`
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C)
+![RADMC-3D](https://img.shields.io/badge/RADMC--3D-444444)
+![Optool](https://img.shields.io/badge/Optool-444444)
 
 ---
 
@@ -40,7 +64,12 @@ Built for someone who needed to read handwritten blood pressure logs several tim
 
 To choose the right model, I built a separate benchmarking tool -- [BP OCR Bench](https://github.com/Thiebauts/bp-ocr-bench). With a friend, I created a dataset of handwritten notes at varying difficulty levels, then evaluated 18 vision models (from Google, OpenAI, Anthropic, Mistral, and others) on extraction accuracy, cost per request, and response time. The result: Gemini Flash 3.0 and Gemini 3.1 Flash Lite sit on the Pareto frontier, achieving 95–98% accuracy at ~$0.001/request -- two orders of magnitude cheaper than frontier models for comparable precision.
 
-`TypeScript` · `Next.js` · `React` · `OpenRouter API` · `Vite` · `IndexedDB`
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=20232a)
+![OpenRouter](https://img.shields.io/badge/OpenRouter%20API-6366F1)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![IndexedDB](https://img.shields.io/badge/IndexedDB-444444)
 
 ---
 
@@ -48,7 +77,12 @@ To choose the right model, I built a separate benchmarking tool -- [BP OCR Bench
 
 I'm a member of [Triathlon Väst](https://www.triathlonvast.se/) in Gothenburg, a club that organises competitions in running, swimming, cycling, triathlon, duathlon, and swimrun throughout the year. That generates a lot of results data, so I built a dashboard where members can browse competition results, view athlete profiles, track accumulated points, and explore club rankings across seasons (2021–2025). The data comes from CSV exports of the competition management system, parsed and bundled at build time. The app is bilingual (Swedish/English) and open to contributions -- members can request features or submit pull requests directly.
 
-`TypeScript` · `Next.js` · `React` · `Recharts` · `Tailwind CSS` · `Vercel`
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=20232a)
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
 
 ---
 
@@ -56,7 +90,19 @@ I'm a member of [Triathlon Väst](https://www.triathlonvast.se/) in Gothenburg, 
 
 A collection of end-to-end machine learning projects from Kaggle Playground Series competitions and NeurIPS challenges. Each repo covers data exploration, feature engineering, model selection, hyperparameter tuning (Optuna), and ensemble strategies, with experiment tracking via MLflow or Azure ML. Topics range from churn prediction and flood forecasting to polymer property regression from molecular SMILES. All Kaggle project repositories are named with the `kaggle-` prefix.
 
-`Python` · `Scikit-learn` · `LightGBM` · `XGBoost` · `CatBoost` · `Optuna` · `MLflow` · `PyTorch`
+- [kaggle-polymer-properties](https://github.com/Thiebauts/kaggle-polymer-properties) -- 5 polymer properties from SMILES | Random Forest + ChemBERTa (NeurIPS 2025)
+- [kaggle-irrigation-prediction](https://github.com/Thiebauts/kaggle-irrigation-prediction) -- Irrigation classification | BA = 0.971 | class weighting + ensemble
+- [kaggle-customer-churn](https://github.com/Thiebauts/kaggle-customer-churn) -- Churn classification | AUC = 0.914 | greedy ensemble from 75 experiments
+- [kaggle-flood-prediction](https://github.com/Thiebauts/kaggle-flood-prediction) -- Flood prediction regression | R² = 0.869 | LightGBM + feature engineering
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
+![LightGBM](https://img.shields.io/badge/LightGBM-02569B)
+![XGBoost](https://img.shields.io/badge/XGBoost-337AB7)
+![CatBoost](https://img.shields.io/badge/CatBoost-FFCC00)
+![Optuna](https://img.shields.io/badge/Optuna-2980B9)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
 
 ---
 
