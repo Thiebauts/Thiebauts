@@ -86,6 +86,29 @@ I'm a member of [Triathlon Väst](https://www.triathlonvast.se/) in Gothenburg, 
 
 ---
 
+### [Triagegeist](https://github.com/Thiebauts/kaggle-triagegeist)
+
+This was a particularly important project for me. I have a long-standing interest in medicine, and Triagegeist was the first time I could bring my data-science work into a clinical setting -- a combination I had been wanting to try for years. I built it as a one-person submission to the Laitinen-Fredriksson Foundation **ED Triage Acuity Hackathon** (April 2026), a $10k competition on emergency-department triage prediction.
+
+The clinical problem: when patients arrive at an emergency department, a triage nurse assigns an *acuity level* (1 = resuscitation, 5 = non-urgent) on the Emergency Severity Index, and that decision determines how quickly they are seen. The two error modes are not symmetric. **Under-triage** -- assigning a lower acuity than warranted -- carries documented mortality risk (OR 1.24-2.18 for trauma deaths), whereas **over-triage** mostly wastes resources. Yet most ML triage models optimise for symmetric metrics like macro-F1, which treats both errors as equally costly. Triagegeist explicitly bakes that asymmetry into training, calibration, and threshold selection.
+
+The pipeline fine-tunes [Bio_ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT) on chief-complaint free text, blends its embeddings with structured vitals through a gradient-boosted ensemble (LightGBM + XGBoost + CatBoost), then runs a Nelder-Mead optimisation over per-class thresholds to minimise an asymmetric under-triage cost. SHAP explanations and an intersectional bias audit (across age x sex x race subgroups) are built in -- both required for the EU AI Act Annex III §5(d) compliance mapping included in the submission. The model was validated on **80k synthetic Kaggle encounters and 418k real MIMIC-IV-ED visits**, where it matched live nurse-to-expert inter-rater reliability (κ = 0.701 vs published 0.694) and reduced overall under-triage from 15.2% to 6.1% while shrinking the worst-subgroup disparity ratio from 2.47 to 1.43.
+
+The repository ships with a runnable Kaggle notebook, a ~125-page LaTeX report covering full methodology and ablations, the hackathon writeup, and aggregate MIMIC-IV-ED supplementary results (figures + JSON/CSV summaries only -- no patient-level data, in line with PhysioNet's data-use agreement).
+
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)
+![Bio_ClinicalBERT](https://img.shields.io/badge/Bio__ClinicalBERT-444444)
+![LightGBM](https://img.shields.io/badge/LightGBM-02569B)
+![XGBoost](https://img.shields.io/badge/XGBoost-337AB7)
+![CatBoost](https://img.shields.io/badge/CatBoost-FFCC00)
+![SHAP](https://img.shields.io/badge/SHAP-2EB6BC)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?logo=latex&logoColor=white)
+
+---
+
 ### Kaggle Competitions
 
 A collection of end-to-end machine learning projects from Kaggle Playground Series competitions and NeurIPS challenges. Each repo covers data exploration, feature engineering, model selection, hyperparameter tuning (Optuna), and ensemble strategies, with experiment tracking via MLflow or Azure ML. Topics range from churn prediction and flood forecasting to polymer property regression from molecular SMILES. All Kaggle project repositories are named with the `kaggle-` prefix.
